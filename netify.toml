@@ -1,8 +1,8 @@
 
 [[redirects]]
   from = "/*"
-  to = "/products"
-  status = 301
+  to = "/index.html"
+  status = 200
 
 
 
