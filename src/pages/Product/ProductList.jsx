@@ -17,6 +17,7 @@ function ProductList() {
   })
 
   useEffect(() => {
+    document.title = "TNike - Products"
     handleGetAllProduct();
   }, [loading])
 
