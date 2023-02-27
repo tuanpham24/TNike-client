@@ -19,7 +19,6 @@ export default function ProductItem({ product }) {
     <Card
       sx={{ maxWidth: 500 }}
       className="card-item"
-    // onClick={}
     >
       <Link className="detail-btn" to={'/product/' + product._id}>
         <div className="card-detail"><button className="detail-btn">See more... <FontAwesomeIcon icon={faArrowRight} /></button></div>
@@ -35,6 +34,9 @@ export default function ProductItem({ product }) {
           </Typography>
           <Typography variant="body2" color="text.secondary" className="text-overflow">
             {product.description}
+          </Typography>
+          <Typography variant="h6" color="text.secondary" className="text-overflow">
+            ${product.price}
           </Typography>
         </CardContent>
       </Link>

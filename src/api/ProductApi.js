@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as CONSTANTS from '../configs/constants';
-const baseUrl = CONSTANTS.BASE_URL + '/api';
+// const baseUrl = CONSTANTS.BASE_URL + '/api';
+const baseUrl = CONSTANTS.LOCAL_API + '/api';
 
 export const getAllProduct = () => {
   const url = baseUrl + '/product';
