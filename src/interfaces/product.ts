@@ -1,12 +1,14 @@
-
 export interface Product {
-  _id: String;
-  name: String;
-  type: String;
-  description: String;
-  thumbnail: String;
-  quantity: Number;
-  price: Number;
-  size: [Number];
-  stars: [Number];
+  _id: string;
+  name: string;
+  type: {
+    id: string;
+    name: string;
+  };
+  description: string;
+  thumbnail: string;
+  quantity: number;
+  price: number;
+  size: Array<number>;
+  stars: Array<number>;
 }
