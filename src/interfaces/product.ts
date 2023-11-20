@@ -2,13 +2,14 @@ export interface Product {
   _id: string;
   name: string;
   type: {
-    id: string;
+    _id: string;
     name: string;
   };
   description: string;
-  thumbnail: string;
-  quantity: number;
+  image_path: string;
+  size: Array<string>;
+  purchase_price: number;
   price: number;
-  size: Array<number>;
+  sold_quantity: number;
   stars: Array<number>;
 }

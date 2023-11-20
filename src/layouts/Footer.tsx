@@ -51,7 +51,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="copyright text-center border-t border-gray-300 py-2">
-          <p className="text-white text-xs text-gray-300">Copyright &copy; 2023 Tunn.</p>
+          <p className="text-xs text-gray-300">
+            Copyright &copy; 2023 Tunn.
+          </p>
         </div>
       </div>
     </>

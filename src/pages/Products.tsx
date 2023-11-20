@@ -16,9 +16,6 @@ const Products: React.FC = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  console.log(products);
-  
-
   if (loading === "pending") {
     return <Loading />;
   }
@@ -33,7 +30,7 @@ const Products: React.FC = () => {
   return (
     <>
       <div className="container mx-auto px-4 md:px-8 mt-4">
-        <div className="grid grid-cols-5">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
           {products?.map((product, index) => (
             <ProductItem key={index} product={product} />
           ))}

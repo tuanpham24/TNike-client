@@ -14,7 +14,10 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-8">
           <div className="flex justify-between items-center">
             <div className="logo">
-              <h1 className="text-bold text-3xl text-black"><span className="font-sans text-pink-600 font-medium">T</span>Nike</h1>
+              <h1 className="text-bold text-3xl text-black">
+                <span className="font-sans text-pink-600 font-medium">T</span>
+                Nike
+              </h1>
             </div>
 
             <ul className="nav hidden md:flex space-x-4">
@@ -38,8 +41,15 @@ const Header: React.FC = () => {
             <div className="w-1/4 pl-1 search-box rounded border border-black">
               <form action="">
                 <div className="flex items-center">
-                  <input className="outline-none px-1 text-sm w-11/12" type="text" placeholder="Search here..."/>
-                  <FontAwesomeIcon icon={faSearch} className="w-1/12 py-2 px-1 bg-pink-600 text-white cursor-pointer hover:bg-pink-700 transition duration-200" />
+                  <input
+                    className="outline-none px-1 text-sm w-11/12"
+                    type="text"
+                    placeholder="Search here..."
+                  />
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    className="w-1/12 py-2 px-1 bg-pink-600 text-white cursor-pointer hover:bg-pink-700 transition duration-200"
+                  />
                 </div>
               </form>
             </div>
