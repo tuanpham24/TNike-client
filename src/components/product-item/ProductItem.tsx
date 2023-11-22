@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Product } from "../../interfaces/product";
+import Rating from "../rating/Rating";
 
 const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
+  
   return (
     <>
       <Link to={product._id}>
@@ -16,11 +18,13 @@ const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
           </div>
           <div className="product-content p-2">
             <h5>{product.name}</h5>
-            <p className="text-sm">Category: {product.type.name}</p>
+            <p className="text-sm">{product.type.name}</p>
             <h5 className="text-red-950 text-lg">${product.price}</h5>
-            <div className="product-rating">
-              
+            <div className="md:flex items-center">
+              <Rating productId={product._id} productRatings={product.stars}/>
+              <i className="md:pl-4 text-gray-500">Sold {product.sold_quantity}</i>
             </div>
+
           </div>
         </div>
       </Link>

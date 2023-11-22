@@ -10,8 +10,8 @@ import {
 const Header: React.FC = () => {
   return (
     <>
-      <div className="shadow-md py-2">
-        <div className="container mx-auto px-8">
+      <div className="sticky z-50 w-full top-0 bg-white shadow-md py-2">
+        <div className="container mx-auto md:px-8 sm:container-2xl">
           <div className="flex justify-between items-center">
             <div className="logo">
               <h1 className="text-bold text-3xl text-black">
