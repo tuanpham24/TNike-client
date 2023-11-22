@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '360px',
+      }
+    },
+    container: {
+      center: true,
+    },
     colors: {
       'black': {
         950: '#020617',
@@ -14,7 +21,6 @@ export default {
       },
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
-      'pink': '#ff49db',
       'orange': '#ff7849',
       'green': '#13ce66',
       'yellow': '#ffc82c',
