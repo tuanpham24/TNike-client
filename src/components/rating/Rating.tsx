@@ -18,8 +18,6 @@ const Rating: React.FC<RatingProps> = ({ productId, productRatings }) => {
 
   }, [productRatings]);
 
-  console.log(averageRating);
-
   return (
     <>
       <div>

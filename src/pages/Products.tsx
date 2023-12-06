@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../features/productSlice";
+import { getProductList } from "../services/productAPI";
 import { RootState, AppDispatch } from "../app/store";
 import ProductItem from "../components/product-item/ProductItem";
 import EmptyPage from "../components/empty-page/EmptyPage";
@@ -13,7 +13,7 @@ const Products: React.FC = () => {
   const error = useSelector((state: RootState) => state.products.error);
   
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(getProductList());
   }, [dispatch]);
 
   if (loading === "pending") {
