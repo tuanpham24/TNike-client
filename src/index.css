@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  background-color: #F1EFEF;
+}
+
 /* Loading */
 .spiner {
   animation: spin 1s linear infinite;

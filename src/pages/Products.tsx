@@ -11,7 +11,7 @@ const Products: React.FC = () => {
   const products = useSelector((state: RootState) => state.products.products) || [];
   const loading = useSelector((state: RootState) => state.products.loading);
   const error = useSelector((state: RootState) => state.products.error);
-
+  
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -29,7 +29,7 @@ const Products: React.FC = () => {
   }
   return (
     <>
-      <div className="container mx-auto px-8">
+      <div className="container mt-2 md:mt-4 px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
           {products?.map((product, index) => (
             <ProductItem key={index} product={product} />
