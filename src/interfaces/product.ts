@@ -12,4 +12,17 @@ export interface Product {
   price: number;
   sold_quantity: number;
   stars: Array<number>;
+  sale_off: Boolean;
+}
+
+export interface SaleOffProduct {
+  product: string;
+  percent: number;
+  startSale: Date;
+  endSale: Date;
+}
+
+export interface ProductDetail {
+  product: Product;
+  saleOffInfo: SaleOffProduct;
 }
