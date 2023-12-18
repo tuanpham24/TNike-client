@@ -16,7 +16,7 @@ const ProductDetail: React.FC = () => {
   ) as Product;
   const loading = useSelector((state: RootState) => state.products.loading);
   const error = useSelector((state: RootState) => state.products.error);
-  
+
   useEffect(() => {
     dispatch(getProductById(productId));
   }, [productId]);
@@ -50,8 +50,19 @@ const ProductDetail: React.FC = () => {
               />
               <p className="px-2">Sold: {productInfo?.sold_quantity}</p>
             </div>
-            <h2 className="text-2xl text-red-950 py-2">${productInfo?.price}</h2>
-            <p>{productInfo.description}</p>
+            <h2 className="text-2xl text-red-950 py-2">
+              ${productInfo?.price}
+            </h2>
+            <p>&emsp;{productInfo.description}</p>
+
+            <div className="d-flex mt-4">
+              <button className="w-1/3 py-1 px-2 mr-2 border-2 border-pink-600 rounded-sm hover:shadow-around-md">
+                Add to cart
+              </button>
+              <button className="w-1/3 py-1 px-2 border-2 border-pink-600 bg-pink-600 text-white rounded-sm hover:shadow-around-md">
+                Buy now
+              </button>
+            </div>
           </div>
         </div>
       </div>

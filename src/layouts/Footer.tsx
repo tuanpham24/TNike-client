@@ -1,16 +1,14 @@
 import React from "react";
+import TNikeLogo from "../components/logo/TNike-logo";
 
 const Footer: React.FC = () => {
   return (
     <>
       <div className="mt-1 bg-black-950">
-        <div className="container mx-auto px-8 py-2">
+        <div className="container mx-auto px-8 py-4">
           <div className="flex justify-between">
             <div className="logo">
-              <h1 className="text-bold text-3xl text-white">
-                <span className="font-sans text-pink-600 font-medium">T</span>
-                Nike
-              </h1>
+              <TNikeLogo className="fill-white header-logo"/>
               <i className="text-white">
                 "Step into Style with Nike: Just Do It."
               </i>
@@ -49,11 +47,6 @@ const Footer: React.FC = () => {
               </form>
             </div>
           </div>
-        </div>
-        <div className="copyright text-center border-t border-gray-300 py-2">
-          <p className="text-xs text-gray-300">
-            Copyright &copy; 2023 Tunn.
-          </p>
         </div>
       </div>
     </>

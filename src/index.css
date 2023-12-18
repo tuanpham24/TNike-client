@@ -6,6 +6,11 @@ body {
   background-color: #F1EFEF;
 }
 
+.header-logo {
+  width: 100px;
+  max-width: 100px;
+}
+
 /* Loading */
 .spiner {
   animation: spin 1s linear infinite;
