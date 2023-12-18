@@ -21,6 +21,7 @@ const Rating: React.FC<RatingProps> = ({ productId, productRatings }) => {
   return (
     <>
       <div>
+        <span className="mr-1">{Math.round(averageRating * 10) / 10}</span>
         {[...Array(5)].map((_, index) => (
           <span
             key={index}

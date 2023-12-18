@@ -1,11 +1,11 @@
 // productSlice.ts
 import { createSlice } from "@reduxjs/toolkit";
-import { Product } from "../interfaces/product";
+import { Product, ProductDetail } from "../interfaces/product";
 import { getProductList, getProductById } from "../services/productAPI";
 
 interface ProductState {
   products: Product[];
-  productById: Product | null;
+  productById: ProductDetail | null;
   loading: "idle" | "pending" | "fulfilled" | "rejected";
   error: string | null;
 }
@@ -39,7 +39,7 @@ const productSlice = createSlice({
       })
       .addCase(getProductById.fulfilled, (state, action) => {
         state.loading = "fulfilled";
-        state.productById = action.payload.product;
+        state.productById = action.payload.productInfo;
       })
       .addCase(getProductById.rejected, (state, action) => {
         state.loading = "rejected";
