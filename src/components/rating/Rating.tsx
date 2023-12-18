@@ -1,7 +1,4 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setRatings } from "../../features/ratingSlice";
-import { RootState, AppDispatch } from "../../app/store";
+import React, { useEffect, useMemo } from "react";
 
 interface RatingProps {
   productId: string;
@@ -9,16 +6,17 @@ interface RatingProps {
 }
 
 const Rating: React.FC<RatingProps> = ({ productId, productRatings }) => {
-  const dispatch: AppDispatch = useDispatch();
 
-  const averageRating = useSelector((state: RootState) => state.rating.averageRating);
+  const averageRating = useMemo(() => {
+    if (productRatings.length > 0) {
+      const result = productRatings.reduce((acc, rating) => acc + rating, 0) / productRatings.length;
+      return result;
+    }
+    else {
+      return 0;
+    }
 
-  console.log(averageRating);
-
-  useEffect(() => {
-    dispatch(setRatings(productRatings || []));
-    console.log(productRatings);
-  }, [dispatch, productRatings, productId]);
+  }, [productRatings]);
 
   return (
     <>

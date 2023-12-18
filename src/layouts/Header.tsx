@@ -6,6 +6,7 @@ import {
   faUser,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import TNikeLogo from "../components/logo/TNike-logo";
 
 const Header: React.FC = () => {
   return (
@@ -14,10 +15,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto md:px-8 sm:container-2xl">
           <div className="flex justify-between items-center">
             <div className="logo">
-              <h1 className="text-bold text-3xl text-black">
-                <span className="font-sans text-pink-600 font-medium">T</span>
-                Nike
-              </h1>
+              <TNikeLogo className="fill-black-950 header-logo"/>
             </div>
 
             <ul className="nav hidden md:flex space-x-4">
