@@ -11,7 +11,7 @@ import TNikeLogo from "../components/logo/TNike-logo";
 const Header: React.FC = () => {
   return (
     <>
-      <div className="sticky z-50 w-full top-0 bg-white shadow-md py-2">
+      <div className="sticky z-50 w-full top-0 bg-white shadow-md py-1">
         <div className="container mx-auto md:px-8 sm:container-2xl">
           <div className="flex justify-between items-center">
             <div className="logo">
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                   />
                   <FontAwesomeIcon
                     icon={faSearch}
-                    className="w-1/12 py-2 px-1 bg-pink-600 text-white cursor-pointer hover:bg-pink-700 transition duration-200"
+                    className="w-1/12 py-2 px-1 bg-black-950 text-white cursor-pointer hover:bg-pink-700 transition duration-200"
                   />
                 </div>
               </form>
