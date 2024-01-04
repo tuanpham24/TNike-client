@@ -77,8 +77,8 @@ const ProductDetail: React.FC = () => {
               <h2
                 className={
                   productDetail.product.sale_off
-                    ? "text-xl text-gray-500 line-through"
-                    : "text-2xl text-red-950 ml-2"
+                    ? "text-xl text-gray-500 line-through mr-2"
+                    : "text-2xl text-red-950"
                 }
               >
                 ${productDetail.product.price}
@@ -86,7 +86,7 @@ const ProductDetail: React.FC = () => {
               <h2
                 className={
                   productDetail.product.sale_off
-                    ? "text-2xl text-red-950 ml-2"
+                    ? "text-2xl text-red-950"
                     : "hidden"
                 }
               >
@@ -96,10 +96,10 @@ const ProductDetail: React.FC = () => {
             <p>&emsp;{productDetail.product.description}</p>
 
             <div className="d-flex mt-4">
-              <button className="w-1/3 py-1 px-2 mr-2 border-2 border-pink-600 rounded-sm hover:shadow-around-md">
+              <button className="w-1/3 py-1 px-2 mr-2 border-2 border-black-950 rounded-sm hover:shadow-around-md">
                 Add to cart
               </button>
-              <button className="w-1/3 py-1 px-2 border-2 border-pink-600 bg-pink-600 text-white rounded-sm hover:shadow-around-md">
+              <button className="w-1/3 py-1 px-2 border-2 border-black-950 bg-black-950 text-white rounded-sm hover:shadow-around-md">
                 Buy now
               </button>
             </div>
